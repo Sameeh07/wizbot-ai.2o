@@ -20,7 +20,7 @@ jwt = JWTManager(app)
 # --- API routes ---
 app.register_blueprint(auth_bp, url_prefix="/api/auth")  # Authentication blueprint
 app.register_blueprint(chat_bp, url_prefix="/api/chat")  # Chat blueprint
-app.register_blueprint(transcribe_bp, url_prefix="/api/chat/transcribe")  # Transcription blueprint
+app.register_blueprint(transcribe_bp, url_prefix="/api/chat")  # Transcription blueprint
 
 # --- Health check ---
 @app.route("/api/health")
