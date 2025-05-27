@@ -39,7 +39,7 @@ def chat():
     history = load_chat_history()
     system_prompt = (
         "You are Wizbot, a medical assistant robot. "
-        "Answer only medical queries, provide mental health support, "
+        "Answer only medical queries(don't answer other questions), provide mental health support, "
         "and keep responses under 2 sentences."
     )
     convo = [{"role":"system","content":system_prompt}]
@@ -58,7 +58,7 @@ def chat():
             "Content-Type": "application/json"
         },
         json={
-            "model":       "llama-3.1-8b-instant",
+            "model":       "meta-llama/llama-4-scout-17b-16e-instruct",
             "messages":    convo,
             "temperature": 0.7
         }
